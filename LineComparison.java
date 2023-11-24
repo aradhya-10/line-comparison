@@ -29,9 +29,16 @@ public class LineComparison {
 		System.out.println("Length of First Line = "+ fmt.format(distance1));
 		System.out.println("Length of Second Line = "+ fmt.format(distance2));
 		
-		if(Double.toString(distance2).equals(Double.toString(distance1)))
-			System.out.println("Lengths are equal.");
-		else
-			System.out.println("Lengths are not equal.");
+		int check = Double.toString(distance1).compareTo(Double.toString(distance2));
+		switch(check){
+			case 0:
+				System.out.println("Lengths are equal.");
+				break;
+			case 1:
+				System.out.println("Line1 is bigger than Line 2.");
+				break;
+			default:
+				System.out.println("Line1 is smaller than Line 2.");
+		}
 	}
 }
